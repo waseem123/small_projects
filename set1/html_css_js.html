@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo</title>
+</head>
+<body>
+	<div>
+		<select name="product_category" id="product_category">
+			<option value="0">SELECT CATEGORY</option>
+			<option value="1">FURNITURE</option>
+			<option value="2">ELECTRONICS</option>
+		</select>
+		<input type="text" name="product_price" id="product_price">
+		<button id="btn_discount" onclick="getDiscount()">Get Discount</button>
+	</div>
+</body>
+<script type="text/javascript">
+	function getDiscount() {
+		let product_category_id = parseInt(document.getElementById('product_category').value);
+		let product_category = document.getElementById('product_category').innerHTML;
+		let product_price = parseInt(document.getElementById('product_price').value);
+
+		switch(product_category){
+			case 1:
+
+				break;
+			case 2:
+				break;
+			default:
+				break;
+		}
+	}
+</script>
+</html>
