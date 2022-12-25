@@ -21,10 +21,31 @@
 		let product_category_id = parseInt(document.getElementById('product_category').value);
 		let product_category = document.getElementById('product_category').innerHTML;
 		let product_price = parseInt(document.getElementById('product_price').value);
-
-		switch(product_category){
+		let discount_by_percentage = 0;
+		let discount_amount = 0;
+		switch(product_category_id){
 			case 1:
-
+				if(product_price>=10000){
+					discount_by_percentage = Math.floor(product_price*0.25);
+					discount_amount = product_price - discount_by_percentage;
+					console.log(product_price+","+discount_by_percentage+","+discount_amount);
+				}else if(product_price>=5001 && product_price<=9999){
+					discount_by_percentage = Math.floor(product_price*0.10);
+					discount_amount = product_price - discount_by_percentage;
+					console.log(product_price+","+discount_by_percentage+","+discount_amount);
+				}else if(product_price>=2001 && product_price<=5000){
+					discount_by_percentage = Math.floor(product_price*0.05);
+					discount_amount = product_price - discount_by_percentage;
+					console.log(product_price+","+discount_by_percentage+","+discount_amount);
+				}else if(product_price>=1000 && product_price<=2000){
+					discount_by_percentage = Math.floor(product_price*0.02);
+					discount_amount = product_price - discount_by_percentage;
+					console.log(product_price+","+discount_by_percentage+","+discount_amount);
+				}else{
+					// discount_by_percentage = product_price*0;
+					// discount_amount = product_price - discount_by_percentage;
+					console.log(product_price+","+discount_by_percentage+","+discount_amount);
+				}
 				break;
 			case 2:
 				break;
